@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6923b4393e.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            cursor: pointer;
+            color: white;
+        }
+        .navbar-toggler {
+            border-color: rgba(205, 24, 24, 0.584);
+        }
+        /* Hide horizontal navbar on small screens */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="pics/logo.png" alt="Logo" style="max-width: 145px; max-height: 70px;">
+            </a>
+            <button class="navbar-toggler" type="button" id="navbarToggle" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio">My Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">My Work</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="home" class="section">
+        <div class="container d-flex justify-content-end align-items-center" style="height: 100vh;">
+            <img src="pics/blackpic.jpeg" alt="Black Picture" class="img-fluid rounded-circle slide-image">
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>ayela</span><br>from Pakistan</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <div class="container d-flex justify-content-start align-items-center" style="height: 100vh;">
+            <img src="pics/blackpic.jpeg" alt="Black Picture" class="img-fluid rounded-circle slide-image">
+            <div class="text-center about-me">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis, elementum molestie tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eleifend magna id ante convallis mattis. Quisque in sem tristique, dictum sapien et, accumsan libero.</p>
+                <div class="tabs">
+                    <button class="tablinks" data-target="Skills">Skills</button>
+                    <button class="tablinks" data-target="Experience">Experience</button>
+                    <button class="tablinks" data-target="Education">Education</button>
+                </div>
+                <div id="Skills" class="tabcontent">
+                    <div class="skill-item">
+                        <h3>UI/UX</h3>
+                        <p>Designing Web/App interfaces</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>Web Development</h3>
+                        <p>Web app Development</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>App Development</h3>
+                        <p>Building Android/iOS apps</p>
+                    </div>
+                </div>
+                <div id="Experience" class="tabcontent">
+                    <div class="experience-item">
+                        <h3>2021 - Current</h3>
+                        <p>UI/UX Design Training at ET Institute</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>2019 - 2021</h3>
+                        <p>Team Lead at StarApp LLC</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>2017 - 2019</h3>
+                        <p>UI/UX Design Executive at Coin Digital Ltd</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>2016 - 2017</h3>
+                        <p>Internship at ekart eCommerce</p>
+                    </div>
+                </div>
+                <div id="Education" class="tabcontent">
+                    <div class="education-item">
+                        <h3>2015 - 2019</h3>
+                        <p>Bachelor of Science in Computer Science, XYZ University</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>2013 - 2015</h3>
+                        <p>Higher Secondary Education, ABC College</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>2011 - 2013</h3>
+                        <p>Secondary Education, DEF School</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div id="services">
+      <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list"> 
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web design</h2>
+                <p>
+                    some fekfnek fkene kefksneks, kfeknek fkenfkenf knekf erkk 
+                    reret.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>
+                    some fekfnek fkene kefksnek, kfeknek fkenfkenf knekf erkk 
+                    reret.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App design</h2>
+                <p>
+                    some fekfnek fkene kefksneks kfeknek, fkenfkenf knekf erkk 
+                    reret.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            
+        </div>
+      </div>
+</div>
+ <div id="portfolio">
+ <div class="container">
+    <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+            <img src="pics/work1.jpg">
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>the app connects you to talented people arpund the world
+                    download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div><div class="work">
+            <img src="pics/work2.jpg">
+            <div class="layer">
+                <h3>Music App</h3>
+                <p>the app connects you to talented people arpund the world
+                    download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div><div class="work">
+            <img src="pics/work3.jpg">
+            <div class="layer">
+                <h3>Online shopping App</h3>
+                <p>the app connects you to talented people arpund the world
+                    download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+        </div>
+      </div>
+    
+      <a href="#" class="btn">See more</a>
+ </div>
+ </div>
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+               <h1 class="sub-title">Contact Me</h1> 
+               <p><i class="fa-solid fa-paper-plane"></i>ayela@gmail.com</p>
+               <p><i class="fa-solid fa-phone"></i>03335286981</p>
+               <div class="social-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+               </div>
+               <a href="pics/cv ayelaa.pdf" download class="btn btn2"> Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    
+ </div>
+ <script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle the tab content
+        document.querySelectorAll('.tablinks').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tabcontent').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById(button.getAttribute('data-target')).style.display = 'block';
+            });
+        });
+        // Display the default tab content
+        document.querySelector('.tabcontent').style.display = 'block';
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyLLF1r6IGLcCn1psFeEc5e8Dhqypv-ttUdcVhnL-wASBNXCSQycNbG5ZIitRcTa2fW/exec'
+  const form = document.forms['submit-to-google-sheet']
+   const msg= document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML= "message sent sucessfully"
+        setTimeout(function(){
+            msg.innerHTML =""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    
+</body>
+</html>
